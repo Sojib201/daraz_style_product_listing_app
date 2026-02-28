@@ -95,7 +95,7 @@ class _ProductListingScreenState extends State<ProductListingScreen>
       BuildContext context, bool innerBoxIsScrolled) {
     return [
       SliverAppBar(
-        expandedHeight: 155.h,
+        expandedHeight: 140.h,
         pinned: false,
         floating: false,
         snap: false,
@@ -253,44 +253,24 @@ class _HeaderBanner extends StatelessWidget {
         children: [
           Row(
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Daraz',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 26.sp,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: -1,
-                    ),
-                  ),
-                  Text(
-                    'It\'s all here',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 10.sp,
-                    ),
-                  ),
-                ],
+              Text(
+                'Daraz',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 26.sp,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: -1,
+                ),
               ),
               const Spacer(),
-              Row(
-                children: [
-                  _IconBtn(icon: Icons.notifications_none, onTap: () {}),
-                  SizedBox(width: 8.w),
-                  _IconBtn(icon: Icons.shopping_cart_outlined, onTap: () {}),
-                  SizedBox(width: 8.w),
-                  GestureDetector(
-                    onTap: onProfileTap,
-                    child: CircleAvatar(
-                      radius: 16.r,
-                      backgroundColor: Colors.white24,
-                      child: Icon(Icons.person,
-                          color: Colors.white, size: 18.sp),
-                    ),
-                  ),
-                ],
+              GestureDetector(
+                onTap: onProfileTap,
+                child: CircleAvatar(
+                  radius: 16.r,
+                  backgroundColor: Colors.white24,
+                  child: Icon(Icons.person,
+                      color: Colors.white, size: 18.sp),
+                ),
               ),
             ],
           ),
